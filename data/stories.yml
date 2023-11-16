@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+
+
+- story: greet user
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_save_chat_to_mysql
+
+- story: good bye
+  steps:
+   - intent: goodbye
+   - action: utter_goodbye
+   - action: action_save_chat_to_mysql

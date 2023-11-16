@@ -1,0 +1,276 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: faq/greet_with_info
+  examples: |
+    - My name is [John](name) and I am from [HR](department)
+    - I'm [Alice](name) from [Marketing](department) department
+    - This is [Bob](name) from [Finance](department)
+    - I am [Jane](name) from [Sales](department) department
+    - I'm [Jack](name) from [IT](department) department
+    - I am [Jill](name) from [HR](department) department
+    - My name is [John](name) and I am from [Finance](department) department
+
+- regex: name
+  examples: |
+    - "[A-Za-z ]+"
+    - "[A-Za-z ]+"
+
+- regex: department
+  examples: |
+    - "[A-Za-z ]+"
+    - "[A-Za-z ]+"
+
+
+
+- intent: faq/fallback
+  examples: |
+    - I don't understand.
+    - Can you help me with something else?
+    - This doesn't make sense.
+    - I'm lost.
+    - What can you do?
+    - Tell me about weather 
+    - Where is this place
+    - Tell me a joke.
+    - Can you sing a song?
+    - I want a pizza.
+    - Do you like cats or dogs?
+    - Who won the last World Series?
+    - What's the meaning of life?
+    - How old are you?
+    - What's your favorite color?
+    - Can you recommend a good book to read?
+    - What's the square root of 144?
+    - asdd sadad vdff
+    - asdfvd
+    - iuon sas hkbd wqkjd
+    - casjklcwqdslnf
+    - hye
+
+- intent: faq/screen_not_working
+  examples: |
+    - I need help, my screen is not working.
+    - My screen is unresponsive, can you assist?
+    - The display on my desktop is not functioning, what should I do?
+    - Help! I can't get my screen to work.
+
+- intent: faq/computer_not_turning_on
+  examples: |
+    - My desktop computer won't turn on, what should I check?
+    - The power button on my computer is not responding, any suggestions?
+    - Why is my desktop not powering up?
+    - I'm having trouble turning on my desktop computer.
+
+- intent: faq/usb_ports_not_working
+  examples: |
+    - The USB ports on my desktop aren't working, any solutions?
+    - I can't connect anything to my computer's USB ports, what's wrong?
+    - Why are the USB ports on my desktop not functioning?
+    - My USB devices are not being recognized, what can I do?
+
+- intent: faq/wifi_not_working
+  examples: |
+    - My desktop's Wi-Fi is not working, how can I fix it?
+    - I'm unable to connect to Wi-Fi on my desktop, any troubleshooting tips?
+    - What should I do if my desktop is not connecting to the Wi-Fi?
+    - Help! My Wi-Fi on the desktop is not functioning.
+
+- intent: faq/keyboard_not_responding
+  examples: |
+    - My keyboard is not responding, what could be the issue?
+    - I'm having trouble typing on my desktop, what should I check?
+    - Why is my keyboard not working with my computer?
+    - The keys on my keyboard are not registering, any solutions?
+
+- intent: faq/mouse_not_responding
+  examples: |
+    - My desktop's mouse is not responding, can you help me fix it?
+    - The cursor is not moving, and the mouse is unresponsive, what should I do?
+    - I'm having issues with my desktop mouse, any suggestions?
+    - Why is my computer mouse not working?
+
+- intent: faq/no_audio_in_headsets
+  examples: |
+    - There is no audio in my headsets, what could be the problem?
+    - My headphones are not producing any sound on my desktop, how to fix?
+    - I can't hear anything through my headsets, any troubleshooting tips?
+    - Why is there no audio coming from my headphones?
+
+- intent: faq/camera_not_working
+  examples: |
+    - My camera is not working on my desktop, what should I check?
+    - The webcam on my computer is not functioning, any solutions?
+    - How can I fix my desktop camera that is not working?
+    - I'm having trouble with my computer's camera, any advice?
+
+- intent: faq/power_button_unresponsive
+  examples: |
+    - My desktop's power button is unresponsive, what should I do?
+    - I can't turn off or on my computer using the power button, any suggestions?
+    - Why is the power button on my desktop not working?
+    - Help! The power button on my computer is not responding.
+
+- intent: faq/ethernet_not_working
+  examples: |
+    - My desktop's Ethernet connection is not working, any troubleshooting tips?
+    - I can't connect to the internet using the Ethernet cable on my computer, what's wrong?
+    - Why is my desktop not recognizing the Ethernet connection?
+    - I'm having issues with my computer's Ethernet, how can I fix it?
+
+- intent: faq/desktop_crashing
+  examples: |
+    - My desktop is crashing, what should I do?
+    - Why is my desktop crashing frequently?
+    - I need help, my computer keeps crashing.
+    - What could be causing my desktop to crash?
+
+- intent: faq/computer_slow
+  examples: |
+    - My computer is extremely slow. Can someone please assist?
+    - Why is my computer running so slowly?
+    - Can you help me with my slow computer?
+    - What can I do to speed up my computer?
+
+- intent: faq/screen_not_working_properly
+  examples: |
+    - My screen is not working properly, can someone please check?
+    - The display on my desktop is acting up, what should I do?
+    - Can someone help with my screen issues?
+    - My screen is malfunctioning, any suggestions?
+
+- intent: faq/mic_not_working
+  examples: |
+    - Mic is not working, can someone help?
+    - I'm having issues with my microphone, what should I check?
+    - Can you assist with my non-functional microphone?
+    - Why is my computer's microphone not working?
+
+- intent: faq/lost_remote_desktop_connection
+  examples: |
+    - Lost remote desktop connection, need help.
+    - I can't connect to remote desktop, what should I do?
+    - Remote desktop connection lost, any solutions?
+    - Help! I've lost connection to my remote desktop.
+
+- intent: faq/replace_mouse
+  examples: |
+    - Someone please check/replace the mouse on my station, it is not working properly.
+    - The mouse on my station needs checking or replacement, can someone assist?
+    - My mouse is malfunctioning, either clicking stuff 2 times or not clicking at all.
+    - Can someone help with the issues I'm facing with my mouse?
+
+- intent: faq/no_headset
+  examples: |
+    - I don’t have a headset, what should I do?
+    - I need a headset, can someone provide assistance?
+    - Can you help me with acquiring a headset?
+    - What are the alternatives if I don't have a headset?
+
+- intent: faq/teams_not_working
+  examples: |
+    - MS Teams is not working, need help.
+    - I'm facing issues with MS Teams, can someone assist?
+    - Help! MS Teams is not functioning correctly.
+    - What should I do if MS Teams is not working?
+
+- intent: faq/system_turning_off
+  examples: |
+    - Please help fix the system; it's automatically turning off.
+    - My computer is turning off on its own, what could be the issue?
+    - Can someone assist with the automatic shutdown of my system?
+    - What steps should I take if my system is turning off unexpectedly?
+
+- intent: faq/cannot_connect_premium_server
+  examples: |
+    - I can't connect to the premium server. Can someone help, please?
+    - Need assistance with connecting to the premium server.
+    - Premium server connection issues, what should I check?
+    - Can you help me troubleshoot my inability to connect to the premium server?
+
+- intent: faq/cannot_connect_remote_computer
+  examples: |
+    - Cannot connect to the remote computer, what should I do?
+    - I'm having trouble connecting to a remote computer, any suggestions?
+    - Remote computer connection issues, can someone assist?
+    - Help! I cannot establish a connection to a remote computer.
+
+- intent: faq/one_screen_not_working
+  examples: |
+    - One screen is not working, please help resolve the issue.
+    - I have a display issue with one of my screens, what should I do?
+    - Can someone assist with resolving the problem of one non-functional screen?
+    - Help! One of my screens is not working properly.
+
+- intent: faq/setup_system_for_new_candidate
+  examples: |
+    - Please set up the system for the new candidate.
+    - I need assistance with system setup for a new candidate, can you help?
+    - What steps should I take to set up the system for a new candidate?
+    - Can someone guide me on setting up the system for a new user?
+
+- intent: faq/blue_screen_errors
+  examples: |
+    - I'm experiencing frequent blue screen errors on my desktop; can you help resolve this issue?
+    - How do I fix blue screen errors on my computer?
+    - Blue screen problems on my desktop, any suggestions?
+    - Help! My computer is showing blue screen errors frequently.
+
+- intent: faq/webcam_not_functioning_correctly
+  examples: |
+    - My desktop's webcam is not functioning correctly; can someone check it for me?
+    - I'm having issues with my computer's webcam, what should I do?
+    - Can someone assist with the problems I'm facing with my webcam?
+    - Why is my desktop's webcam not working as expected?
+
+- intent: faq/dual_monitor_setup
+  examples: |
+    - I need assistance with setting up a dual-monitor display on my desktop.
+    - How do I set up a dual-monitor display on my computer?
+    - Can someone guide me through the process of dual-monitor setup?
+    - Help! I'm having trouble configuring a dual-monitor display on my desktop.
+
+- intent: faq/computer_not_booting_up
+  examples: |
+    - My computer is not booting up; can you help me troubleshoot the issue?
+    - I'm unable to start my computer, any suggestions on what to do?
+    - What should I check if my computer is not booting up?
+    - Help! My computer is not turning on properly.
+
+- intent: faq/computer_running_out_of_storage
+  examples: |
+    - My computer is running out of storage, need help.
+    - I'm getting a storage space warning on my computer, what can I do?
+    - Can someone assist with freeing up space on my computer?
+    - What steps should I take if my computer is running out of storage?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
