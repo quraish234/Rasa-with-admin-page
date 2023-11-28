@@ -260,26 +260,33 @@ nlu:
     - Can someone assist with freeing up space on my computer?
     - What steps should I take if my computer is running out of storage?
 
-- issue: outlook_not_working
-  examples:
-    - I'm having trouble opening Outlook.
-    - Outlook is freezing on startup.
-    - My emails are not syncing in Outlook.
-    - I can't send or receive emails in Outlook.
-    - Outlook crashes every time I try to open it.
-    - The search function in Outlook is not working.
-    - I'm experiencing issues with Outlook's calendar.
-    - Outlook is showing an error message, and I don't know how to fix it.
-    - There's a problem with my Outlook profile.
-    - I'm unable to access my attachments in Outlook.
-    - Outlook is running slow and sluggish.
-    - I'm getting connection errors in Outlook.
-    - Outlook is not updating my inbox.
-    - I'm having issues with Outlook on my mobile device.
-    - Outlook is not responding when I click on certain features.
-    - I'm encountering synchronization problems in Outlook.
+- intent: faq/info_provided
+  examples: |
+    - I have provided my name and department.
+    - Already provided my name and department.
+    - I have provided them.
 
 
+
+- intent: faq/v2_down
+  examples: |
+    - V2 is not working
+    - V2 down
+    - V2 not working for me
+    - coco not working
+    - coco down
+ 
+- intent: faq/human_handoff
+  examples: |
+    - I need to talk to a human
+    - I want to talk to a agent
+    - I want to talk to a felix
+    - I want to talk to a ben
+    - live chat
+    - live agent
+    - human
+    - agent
+    - talk to a human 
 
 - intent: goodbye
   examples: |

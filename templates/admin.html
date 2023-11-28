@@ -98,13 +98,13 @@
                <td>{{ chat.message }}</td>
                <td>{{ chat.bot_response }}</td>
                <td>
-                   <select class="status-dropdown" name="status[]" id="status_{{ chat.user_id }}" onchange="updateBackgroundColor(this, '{{ chat.user_id }}')">
-                       <option value="In Progress" style="background-color: #ffeeba;">In Progress</option>
-                       <option value="On Hold" style="background-color: #b8daff;">On Hold</option>
-                       <option value="Solved" style="background-color: #c3e6cb;">Solved</option>
-                       <option value="Closed" style="background-color: #f5c6cb;">Closed</option>
-                   </select>
-               </td>
+                <select class="status-dropdown" name="status[]" id="status_{{ chat.user_id }}" onchange="updateBackgroundColor(this, '{{ chat.user_id }}')">
+                    <option value="In Progress" style="background-color: #ffeeba;">In Progress</option>
+                    <option value="On Hold" style="background-color: #b8daff;">On Hold</option>
+                    <option value="Solved" style="background-color: #c3e6cb;">Solved</option>
+                    <option value="Closed" style="background-color: #f5c6cb;">Closed</option>
+                </select>
+            </td>
                <td><input type="checkbox" name="read[]" value="{{ chat.user_id }}"></td>
            </tr>
            {% endfor %}
@@ -113,43 +113,50 @@
    </form>
 
    <!-- Include Socket.IO library -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 
-   <script>
-       var socket = io.connect('http://' + document.domain + ':' + location.port);
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
 
-       // Function to mark selected chats as read and emit WebSocket event
-       function markAsRead() {
-           var markedChats = [];
-           var checkboxes = document.getElementsByName('read[]');
-           checkboxes.forEach(function(checkbox) {
-               if (checkbox.checked) {
-                   markedChats.push(checkbox.value);
-               }
-           });
+    // Function to mark selected chats as read and emit WebSocket event
+    function markAsRead() {
+        var markedChats = [];
+        var checkboxes = document.getElementsByName('read[]');
+        checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+                markedChats.push(checkbox.value);
+            }
+        });
 
-           // Emit the WebSocket event
-           socket.emit('mark_read', { 'read': markedChats });
+        // Emit the WebSocket event
+        socket.emit('mark_read', { 'read': markedChats });
 
-           // Clear the checkboxes
-           checkboxes.forEach(function(checkbox) {
-               checkbox.checked = false;
-           });
-       }
+        // Clear the checkboxes
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = false;
+        });
+    }
 
-       // Function to update background color based on the selected option
-       function updateBackgroundColor(selectElement, userId) {
-           var selectedOption = selectElement.options[selectElement.selectedIndex];
-           var backgroundColor = selectedOption.style.backgroundColor;
-           var userRow = document.getElementById('user_' + userId);
-           userRow.style.backgroundColor = backgroundColor;
-       }
+    // Function to update background color based on the selected option
+    function updateBackgroundColor(selectElement, userId) {
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        var backgroundColor = selectedOption.style.backgroundColor;
+        var userRow = document.getElementById('user_' + userId);
+        userRow.style.backgroundColor = backgroundColor;
+    }
 
-       // Listen for WebSocket event to update the page content
-       socket.on('update_chats', function(data) {
-           alert(data.message);  // You can replace this with a more sophisticated update logic
-           // For a more seamless update, consider updating the specific elements on the page with new data
-       });
-   </script>
+    // Listen for WebSocket event to update the page content
+    socket.on('update_chats', function(data) {
+        alert(data.message);  // You can replace this with a more sophisticated update logic
+        // For a more seamless update, consider updating the specific elements on the page with new data
+    });
+
+    // Add an event handler for the 'mark_read' event
+    socket.on('mark_read', function(data) {
+        // Handle the 'mark_read' event here, for example, update the UI to indicate that the chats are marked as read
+        alert('Chats marked as read: ' + data.read.join(', '));
+    });
+</script>
 </body>
 </html>
+

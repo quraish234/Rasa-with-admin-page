@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CHATBOT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+      }
+
+      form {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 90px;
+        width: 500px;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #000000;
+      }
+
+      #answer {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CHATBOT</h1>
+    <form>
+      <label for="text">IT Support:</label><br />
+      <input type="text" id="text" name="text" placeholder="Type here..." /><br />
+      <!-- Display the chatbot response safely using innerHTML -->
+      <div id="answer"></div>
+    </form>
+  
+    <script>
+      // This function updates the 'answer' div with the bot's response
+      function updateAnswer(response) {
+        // Sanitize the HTML content to prevent script injection
+        var sanitizedHtml = DOMPurify.sanitize(response);
+        
+        // Update the 'answer' div
+        document.getElementById('answer').innerHTML = sanitizedHtml;
+      }
+    </script>
+  </body>
+  </html>

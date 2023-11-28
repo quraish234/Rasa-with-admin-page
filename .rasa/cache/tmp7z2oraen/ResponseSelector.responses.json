@@ -1,0 +1,157 @@
+{
+  "utter_faq/fallback": [
+    {
+      "text": "I'm sorry, I couldn't understand your request. Please repharese or ask anything else?"
+    }
+  ],
+  "utter_faq/greet_with_info": [
+    {
+      "text": "Please state your issue."
+    }
+  ],
+  "utter_faq/screen_not_working": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/computer_not_turning_on": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/usb_ports_not_working": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/wifi_not_working": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/keyboard_not_responding": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/mouse_not_responding": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/no_audio_in_headsets": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/camera_not_working": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/ethernet_not_working": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/desktop_crashing": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/computer_slow": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/screen_not_working_properly": [
+    {
+      "text": "Please be patient, assistance will be available in approximately 5 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/mic_not_working": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/lost_remote_desktop_connection": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/replace_mouse": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/no_headset": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/teams_not_working": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/system_turning_off": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/cannot_connect_premium_server": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/cannot_connect_remote_computer": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/one_screen_not_working": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/setup_system_for_new_candidate": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/blue_screen_errors": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/webcam_not_functioning_correctly": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 6 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/dual_monitor_setup": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 7 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/computer_not_booting_up": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 7 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/power_button_unresponsive": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 7 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/computer_running_out_of_storage": [
+    {
+      "text": "Please be patient, someone will be with you in approximately 7 minutes. If you have not provided your name and department, please do so now."
+    }
+  ],
+  "utter_faq/info_provided": [
+    {
+      "text": "Thank you for providing your information."
+    }
+  ]
+}

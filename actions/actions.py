@@ -49,11 +49,12 @@ class SaveChatToMySQL(Action):
         return []
 '''
 
-from rasa_sdk import Action
 from rasa_sdk.events import SlotSet, UserUtteranceReverted 
 import mysql.connector
 import requests
-
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 class SaveChatToMySQL(Action):
     def name(self):
         return "action_save_chat_to_mysql"
@@ -93,4 +94,17 @@ class SaveChatToMySQL(Action):
         return []
 
 
-        
+class ActionShowMoreInfo(Action):
+
+    def name(self) -> Text:
+        return "action_show_more_info"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        link = "https://www.google.com"
+        dispatcher.utter_message(text=f"Here is more information: <a href='{link}' target='_blank'>More Info</a>")
+
+        return []
+       
